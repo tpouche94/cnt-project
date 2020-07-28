@@ -1,0 +1,12 @@
+{% load embed_video_tags %}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<div class='container'>
+<div class='vertical-center'>
+    <h1>Live Stream</h1>
+<iframe width="560" height="315" src="http://167.172.148.29:8080/hls/0894.m3u8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+<br>
+<a href={% url 'home' %} class="btn btn-lg btn-secondary">Back</a>
+</div>
+</div>
