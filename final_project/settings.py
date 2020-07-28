@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['jordanjoseph-cent-project.herokuapp.com', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'live_stream.apps.LiveStreamConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
