@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'embed_video',
-    'social_django',
+    
 ]
 
 MIDDLEWARE = [
@@ -52,7 +52,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'final_project.urls'
@@ -69,18 +68,13 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'social_django.context_processors.backends',
-                'social_django.context_processors.login_redirect',
+                
             ],
         },
     },
 ]
 
-AUTHENTICATION_BACKENDS = (
-    'social_core.backends.github.GithubOAuth2',
-    'social_core.backends.twitter.TwitterOAuth',
-    'social_core.backends.facebook.FacebookOAuth2',
-    'django.contrib.auth.backends.ModelBackend',
-)
+
 
 WSGI_APPLICATION = 'final_project.wsgi.application'
 
@@ -144,9 +138,3 @@ MEDIA_URL = '/video/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/video')
 
-LOGIN_URL = 'login'
-LOGOUT_URL = 'logout'
-LOGIN_REDIRECT_URL = 'home'
-
-SOCIAL_AUTH_FACEBOOK_KEY = '1509037172601583'  # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET = '14d160195bbd5a407daa39dd6d1250c8'  # App Secret

@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -48,6 +48,7 @@
     <h1 class="cover-heading">CNT PROJECT</h1>
     <p class="lead">Welcome to my website, please select an option.</p>
     <p class="lead">
+    
       <a href="/static_feed/" class="btn btn-lg btn-secondary">Static Feed</a>
       <a href="/live_stream/" class="btn btn-lg btn-secondary">Live Stream</a>
     </p>   
@@ -61,5 +62,4 @@
 </body>
 
 </html>
-<a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
-{% endblock %}
+
