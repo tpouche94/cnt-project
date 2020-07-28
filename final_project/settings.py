@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -78,8 +79,12 @@ WSGI_APPLICATION = 'final_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dfl84ngii0banh',
+        'HOST': 'ec2-34-225-162-157.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'lsaavkatpvobwj',
+        'PASSWORD': '0ad98f328351130ced53fb6a3759d360abf65402cc1f8e16195cb08853796f3e',
     }
 }
 
