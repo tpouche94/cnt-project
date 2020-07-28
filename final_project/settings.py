@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['jordanjoseph-cent-project.herokuapp.com', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'registration.apps.RegistrationConfig',
     'static_feed.apps.StaticFeedConfig',
     'live_stream.apps.LiveStreamConfig',
     'django.contrib.admin',
@@ -40,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'embed_video',
-    
+
+
 ]
 
 MIDDLEWARE = [
@@ -132,7 +134,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/video/'
 
