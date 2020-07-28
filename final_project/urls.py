@@ -19,7 +19,8 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.homepage, name='home'),
+    path('', include('registration.urls')),
+    path('home/', views.homepage, name='home'),
     path('live_stream/', include('live_stream.urls')),
     path('static_feed/', include('static_feed.urls')),
     
