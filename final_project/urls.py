@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path,include,url
 from . import views
 
 urlpatterns = [
@@ -22,5 +22,6 @@ urlpatterns = [
     path('', views.homepage, name='home'),
     path('live_stream/', include('live_stream.urls')),
     path('static_feed/', include('static_feed.urls')),
+    path('oauth/', include('social_django.urls', namespace='social')),  # <--
 
 ]
