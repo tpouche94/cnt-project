@@ -9,9 +9,14 @@ def register(request):
         password = request.POST['password']
         confirm_password = request.POST['confirm_password']
 
-        user = User.objects.create_user(email=email, password=password,first_name=first_name, last_name=last_name)
-        user.save()
-        print('user created')
-        return redirect('/')
+
+
+        if password==confirm_password:
+            user = User.objects.create_user(email=email, password=password,first_name=first_name, last_name=last_name)
+            user.save()
+            print('user created')
+            return redirect('/')
+        else:
+            print('password does not match')
     else:
         return render(request, 'registration.html')
